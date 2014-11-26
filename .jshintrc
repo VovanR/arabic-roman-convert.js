@@ -1,0 +1,25 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "latedef": true,
+  "newcap": true,
+  "nonbsp": true,
+  "nonew": true,
+  "plusplus": false,
+  "quotmark": "single",
+  "undef": true,
+  "browser": true,
+  "globals": {
+    "define": true,
+    "require": true,
+    "mocha": true,
+    "mochaPhantomJS": true,
+    "chai": true,
+    "describe": true,
+    "it": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "module": true
+  }
+}

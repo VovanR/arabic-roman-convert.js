@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>arabic-roman-convert.js</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <input id="test-in" value="" type="text" autocomplete="off">
+        <input id="test-out" value="" type="text" autocomplete="off" readonly="">
+
+        <script src="../index.js"></script>
+        <script>
+        (function () {
+
+            var testInput = document.querySelector('#test-in');
+            var testOutput = document.querySelector('#test-out');
+
+            var updateOutput = function () {
+                testOutput.value = window.ArabicRoman.toRoman(testInput.value);
+            };
+
+            testInput.value = new Date().getUTCFullYear();
+
+            updateOutput();
+
+            testInput.addEventListener('keyup', function () {
+                updateOutput();
+            });
+
+        })();
+        </script>
+    </body>
+</html>

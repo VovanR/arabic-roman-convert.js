@@ -1,0 +1,24 @@
+{
+  "name": "arabic-roman-convert.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
+  "license": "MIT",
+  "repository": "VovanR/arabic-roman-convert.js",
+  "author": {
+    "name": "VovanR",
+    "url": "http://vovanr.com/"
+  },
+  "devDependencies": {
+    "bower": "",
+    "gulp": "",
+    "gulp-jscs": "",
+    "gulp-jshint": "",
+    "gulp-mocha-phantomjs": "",
+    "jscs": "",
+    "jscs-jsdoc": "",
+    "jshint-stylish": ""
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install"
+  }
+}
