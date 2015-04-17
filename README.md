@@ -1,5 +1,10 @@
-arabic-roman-convert.js
-=======================
+# arabic-roman-convert.js
+
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coveralls Status][coveralls-image]][coveralls-url]
+[![Dependency Status][depstat-image]][depstat-url]
+[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
 Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http://en.wikipedia.org/wiki/Roman_numerals) UTF-8 numerals
 
@@ -23,3 +28,18 @@ Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http:/
 500 → Ⅾ
 1000 → Ⅿ
 ```
+
+[npm-url]: https://npmjs.org/package/arabic-roman-convert.js
+[npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg
+
+[travis-url]: https://travis-ci.org/VovanR/arabic-roman-convert.js
+[travis-image]: http://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg
+
+[coveralls-url]: https://coveralls.io/r/VovanR/arabic-roman-convert.js
+[coveralls-image]: http://img.shields.io/coveralls/VovanR/arabic-roman-convert.js.svg
+
+[depstat-url]: https://david-dm.org/VovanR/arabic-roman-convert.js
+[depstat-image]: https://david-dm.org/VovanR/arabic-roman-convert.js.svg
+
+[depstat-dev-url]: https://david-dm.org/VovanR/arabic-roman-convert.js
+[depstat-dev-image]: https://david-dm.org/VovanR/arabic-roman-convert.js/dev-status.svg
