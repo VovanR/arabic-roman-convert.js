@@ -1,5 +1,6 @@
 # arabic-roman-convert.js
 
+[![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
@@ -27,6 +28,9 @@ Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http:/
 500 → Ⅾ
 1000 → Ⅿ
 ```
+
+[npm-url]: https://npmjs.org/package/bemstyla
+[npm-image]: http://img.shields.io/npm/v/bemstyla.svg
 
 [travis-url]: https://travis-ci.org/VovanR/arabic-roman-convert.js
 [travis-image]: http://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg
