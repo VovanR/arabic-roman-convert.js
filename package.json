@@ -13,13 +13,20 @@
   },
   "devDependencies": {
     "chai": "^2.2.0",
+    "coveralls": "^2.11.2",
+    "husky": "^0.7.0",
+    "istanbul": "^0.3.11",
     "jscs": "^1.12.0",
     "jscs-jsdoc": "^0.4.6",
     "jshint": "^2.7.0",
     "jshint-stylish": "^1.0.1",
-    "mocha": "^2.2.4"
+    "mocha": "^2.2.4",
+    "mocha-lcov-reporter": "0.0.2"
   },
   "scripts": {
+    "coverage": "istanbul cover _mocha --",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "precoveralls": "npm run coverage",
     "prepush": "npm test; npm run lint",
     "tdd": "mocha --watch",
     "test": "mocha",
