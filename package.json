@@ -1,6 +1,6 @@
 {
   "name": "arabic-roman-convert.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert Arabic to Roman UTF-8 numerals",
   "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
   "license": "MIT",
