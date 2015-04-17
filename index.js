@@ -1,5 +1,7 @@
-/**
- * @author VovanR <mail@vovanr.com>
+/*!
+ * arabic-roman-convert.js
+ * Copyright(c) 2015 VovanR <mail@vovanr.com>
+ * MIT Licensed
  */
 
 (function (root, factory) {

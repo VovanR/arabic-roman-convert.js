@@ -4,22 +4,27 @@
   "description": "Convert Arabic to Roman UTF-8 numerals",
   "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
   "license": "MIT",
-  "repository": "VovanR/arabic-roman-convert.js",
+  "bugs": {
+    "url": "https://github.com/VovanR/arabic-roman-convert.js/issues"
+  },
   "author": {
     "name": "VovanR",
     "url": "http://vovanr.com/"
   },
   "devDependencies": {
-    "bower": "",
-    "gulp": "",
-    "gulp-jscs": "",
-    "gulp-jshint": "",
-    "gulp-mocha-phantomjs": "",
-    "jscs": "",
-    "jscs-jsdoc": "",
-    "jshint-stylish": ""
+    "chai": "^2.2.0",
+    "jscs": "^1.12.0",
+    "jscs-jsdoc": "^0.4.6",
+    "jshint": "^2.7.0",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.2.4"
   },
   "scripts": {
-    "postinstall": "./node_modules/.bin/bower install"
+    "prepush": "npm test; npm run lint",
+    "tdd": "mocha --watch",
+    "test": "mocha",
+    "lint": "npm run jslint; npm run jscs",
+    "jslint": "jshint --reporter ./node_modules/jshint-stylish/stylish.js ./*.js",
+    "jscs": "jscs ./*.js"
   }
 }
