@@ -29,8 +29,8 @@ Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http:/
 1000 → Ⅿ
 ```
 
-[npm-url]: https://npmjs.org/package/bemstyla
-[npm-image]: http://img.shields.io/npm/v/bemstyla.svg
+[npm-url]: https://npmjs.org/package/arabic-roman-convert.js
+[npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg
 
 [travis-url]: https://travis-ci.org/VovanR/arabic-roman-convert.js
 [travis-image]: http://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg
