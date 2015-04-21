@@ -1,0 +1,41 @@
+{
+  "name": "arabic-roman-convert.js",
+  "version": "1.0.1",
+  "description": "Convert Arabic to Roman UTF-8 numerals",
+  "authors": [
+    "Vladimir Rodkin <mail@vovanr.com>"
+  ],
+  "keywords": [
+    "converter",
+    "arabic",
+    "number",
+    "roman",
+    "numeral",
+    "utf8",
+    "utf-8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VovanR/arabic-roman-convert.js"
+  },
+  "main": "./index.js",
+  "devDependencies": {},
+  "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
+  "license": "MIT",
+  "dependencies": {},
+  "ignore": [
+    "package.json",
+    "node_modules",
+    "**/.*",
+    "test.js",
+    "example",
+    "LICENSE",
+    "README.md"
+  ],
+  "moduleType": [
+    "globals",
+    "amd",
+    "node"
+  ],
+  "private": false
+}
