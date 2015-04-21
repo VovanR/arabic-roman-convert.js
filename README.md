@@ -8,6 +8,8 @@
 
 Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http://en.wikipedia.org/wiki/Roman_numerals) UTF-8 numerals
 
+Demo: [vovanr.github.io/arabic-roman-convert.js](https://vovanr.github.io/arabic-roman-convert.js)
+
 ```
 1 → Ⅰ
 2 → Ⅱ
@@ -27,6 +29,31 @@ Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http:/
 100 → Ⅽ
 500 → Ⅾ
 1000 → Ⅿ
+```
+
+## Install and Usage
+
+### Bower
+```sh
+bower install --save arabic-roman-convert.js
+```
+```html
+<link rel="stylesheet" href="bower_components/arabic-roman-convert.js/dist/arabic-roman-convert.min.js">
+```
+```js
+var num = window.ArabicRoman.toRoman(2015);
+console.log(num); // ⅯⅯⅩⅤ
+```
+
+### Node
+```sh
+npm i --save arabic-roman-convert.js
+```
+```js
+var arabicRomanConvert = require('arabic-roman-convert.js');
+
+var num = arabicRomanConvert.toRoman(2015);
+console.log(num); // ⅯⅯⅩⅤ
 ```
 
 [npm-url]: https://npmjs.org/package/arabic-roman-convert.js
