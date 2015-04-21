@@ -2,14 +2,35 @@
   "name": "arabic-roman-convert.js",
   "version": "1.0.1",
   "description": "Convert Arabic to Roman UTF-8 numerals",
-  "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/VovanR/arabic-roman-convert.js/issues"
+  "author": "Vladimir Rodkin <mail@vovanr.com>",
+  "keywords": [
+    "converter",
+    "arabic",
+    "number",
+    "roman",
+    "numeral",
+    "utf8",
+    "utf-8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VovanR/arabic-roman-convert.js"
   },
-  "author": {
-    "name": "VovanR",
-    "url": "http://vovanr.com/"
+  "main": "./index.js",
+  "engines": {
+    "node": ""
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha --",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "jscs": "jscs ./*.js",
+    "jslint": "jshint --reporter ./node_modules/jshint-stylish/stylish.js ./*.js",
+    "lint": "npm run jslint; npm run jscs",
+    "postpublish": "git push --follow-tags",
+    "precoveralls": "npm run coverage",
+    "prepush": "npm test; npm run lint",
+    "tdd": "mocha --watch",
+    "test": "mocha"
   },
   "devDependencies": {
     "chai": "^2.2.0",
@@ -23,16 +44,10 @@
     "mocha": "^2.2.4",
     "mocha-lcov-reporter": "0.0.2"
   },
-  "scripts": {
-    "coverage": "istanbul cover _mocha --",
-    "coveralls": "coveralls < coverage/lcov.info",
-    "jscs": "jscs ./*.js",
-    "jslint": "jshint --reporter ./node_modules/jshint-stylish/stylish.js ./*.js",
-    "lint": "npm run jslint; npm run jscs",
-    "postpublish": "git push --follow-tags",
-    "precoveralls": "npm run coverage",
-    "prepush": "npm test; npm run lint",
-    "tdd": "mocha --watch",
-    "test": "mocha"
-  }
+  "bugs": {
+    "url": "https://github.com/VovanR/arabic-roman-convert.js/issues"
+  },
+  "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
+  "license": "MIT",
+  "dependencies": {}
 }
