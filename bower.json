@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/VovanR/arabic-roman-convert.js"
   },
-  "main": "./index.js",
+  "main": "./dist/index.js",
   "devDependencies": {},
   "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "node_modules",
     "**/.*",
     "test.js",
+    "index.js",
     "example",
     "LICENSE",
     "README.md"

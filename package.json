@@ -30,7 +30,13 @@
     "precoveralls": "npm run coverage",
     "prepush": "npm test; npm run lint",
     "tdd": "mocha --watch",
-    "test": "mocha"
+    "test": "mocha",
+    "uglify:dist": "uglifyjs ./index.js > ./dist/arabic-roman-convert.min.js",
+    "uglify": "npm run uglify:dist",
+    "copy:dist": "cp ./index.js ./dist/arabic-roman-convert.js",
+    "copy": "npm run copy:dist",
+    "build:js": "npm run jshint && npm run uglify",
+    "build": "npm run copy && npm run build:js"
   },
   "devDependencies": {
     "chai": "^2.2.0",
@@ -42,7 +48,8 @@
     "jshint": "^2.7.0",
     "jshint-stylish": "^1.0.1",
     "mocha": "^2.2.4",
-    "mocha-lcov-reporter": "0.0.2"
+    "mocha-lcov-reporter": "0.0.2",
+    "uglifyjs": "^2.4.10"
   },
   "bugs": {
     "url": "https://github.com/VovanR/arabic-roman-convert.js/issues"
