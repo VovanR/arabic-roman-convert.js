@@ -28,6 +28,28 @@
         12,
         11,
     ];
+    var stringRoman = [
+        'M',
+        '#',
+        'D',
+        '#',
+        'C',
+        '#',
+        'L',
+        '#',
+        'XII',
+        'XI',
+        'X',
+        'IX',
+        'VIII',
+        'VII',
+        'VI',
+        'V',
+        'IV',
+        'III',
+        'II',
+        'I',
+    ];
     var roman = [
         '\u216F',
         '\u216D\u216F', // hard number
@@ -83,6 +105,31 @@
                     }
                     result += roman[i];
                     number -= currentArabic;
+                }
+            }
+
+            return result;
+        },
+
+        /**
+         * Convert roman regular string to roman numerals
+         *
+         * @param {String} source
+         * @return {String}
+         */
+        convertRoman: function (source) {
+            var result = '';
+            var i;
+            var length = stringRoman.length;
+            var current;
+            var re;
+            for (i = 0; i < length; i += 1) {
+                current = stringRoman[i];
+                re = new RegExp('^' + current, 'i');
+                if (re.test(source)) {
+                    result = roman[i];
+                    result += this.convertRoman(source.substr(current.length, source.length));
+                    break;
                 }
             }
 
