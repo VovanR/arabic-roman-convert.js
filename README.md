@@ -6,10 +6,11 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http://en.wikipedia.org/wiki/Roman_numerals) UTF-8 numerals
+> Convert [Arabic][wiki-arabic] to [Roman][wiki-roman] UTF-8 numerals
 
-Demo: [vovanr.github.io/arabic-roman-convert.js](https://vovanr.github.io/arabic-roman-convert.js)
+Demo: [vovanr.github.io/arabic-roman-convert.js][demo]
 
+**Arabic numerals** `.arabicToRoman({Number|String})`
 ```
 1 → Ⅰ
 2 → Ⅱ
@@ -30,6 +31,35 @@ Demo: [vovanr.github.io/arabic-roman-convert.js](https://vovanr.github.io/arabic
 500 → Ⅾ
 1000 → Ⅿ
 ```
+
+**Simple roman strings** `.convertRoman({String})`
+```
+I → Ⅰ
+III → Ⅲ
+vii → Ⅶ
+ix → Ⅸ
+X → Ⅹ
+XV → ⅩⅤ
+l → Ⅼ
+c → Ⅽ
+D → Ⅾ
+M → Ⅿ
+```
+
+**Arabic number or simple Roman string** `.toRoman({String|Number})`
+```
+2 → Ⅱ
+III → Ⅲ
+vii → Ⅶ
+9 → Ⅸ
+X → Ⅹ
+XV → ⅩⅤ
+l → Ⅼ
+100 → Ⅽ
+D → Ⅾ
+M → Ⅿ
+```
+
 
 ## Install and Usage
 
@@ -55,6 +85,10 @@ var arabicRomanConvert = require('arabic-roman-convert.js');
 var num = arabicRomanConvert.toRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
+
+[wiki-arabic]: http://en.wikipedia.org/wiki/Arabic_numerals
+[wiki-roman]: http://en.wikipedia.org/wiki/Roman_numerals
+[demo]: https://vovanr.github.io/arabic-roman-convert.js
 
 [npm-url]: https://npmjs.org/package/arabic-roman-convert.js
 [npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg
