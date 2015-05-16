@@ -102,3 +102,21 @@ describe('#toRoman', function () {
         assert.equal(arabicRoman.toRoman(900), charToCode('C', 'M'));
     });
 });
+
+describe('#convertRoman', function () {
+    it('should convert string to utf-8 symbols', function () {
+        for (var num in cod) {
+            assert.equal(arabicRoman.convertRoman(num), charToCode(num));
+        }
+    });
+
+    it('should convert symbols not in dict', function () {
+        assert.equal(arabicRoman.convertRoman('XV'), charToCode('X', 'V'));
+        assert.equal(arabicRoman.convertRoman('XXX'), charToCode('X', 'X', 'X'));
+        assert.equal(arabicRoman.convertRoman('CXXVIII'), charToCode('C', 'X', 'X', 'VIII'));
+    });
+
+    it('should support lowercase input', function () {
+        assert.equal(arabicRoman.convertRoman('vii'), charToCode('VII'));
+    });
+});
