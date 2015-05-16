@@ -10,7 +10,7 @@ Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http:/
 
 Demo: [vovanr.github.io/arabic-roman-convert.js](https://vovanr.github.io/arabic-roman-convert.js)
 
-Arabic numerals `.toRoman({Number|String})`
+**Arabic numerals** `.toRoman({Number|String})`
 ```
 1 → Ⅰ
 2 → Ⅱ
@@ -32,7 +32,7 @@ Arabic numerals `.toRoman({Number|String})`
 1000 → Ⅿ
 ```
 
-Simple roman strings `.convertRoman({String})`
+**Simple roman strings** `.convertRoman({String})`
 ```
 I → Ⅰ
 III → Ⅲ
