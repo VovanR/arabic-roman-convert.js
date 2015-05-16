@@ -1,6 +1,6 @@
 /*!
  * arabic-roman-convert.js
- * Copyright(c) 2015 VovanR <mail@vovanr.com>
+ * Copyright(c) 2015 Vladimir Rodkin <mail@vovanr.com>
  * MIT Licensed
  */
 
@@ -70,14 +70,57 @@
         roman.push(String.fromCharCode(8543 + i));
     }
 
+    var length = roman.length;
+
+    /**
+     * @param {String} source
+     * @return {String}
+     */
+    function convertRoman(source) {
+        var result = '';
+        var i;
+        var current;
+        var re;
+        for (i = 0; i < length; i += 1) {
+            current = stringRoman[i];
+            re = new RegExp('^' + current, 'i');
+            if (re.test(source)) {
+                result = roman[i];
+                result += convertRoman(source.substr(current.length, source.length));
+                break;
+            }
+        }
+
+        return result;
+    }
+
     return {
         /**
-         * Convert arabic to numeral numerals
+         * @param {Number|String} source
+         * @return {String}
+         */
+        toRoman: function (source) {
+            var result;
+
+            if (
+                (typeof source === 'string' && parseInt(source, 10) > 0) ||
+                typeof source === 'number'
+            ) {
+                result = this.arabicToRoman(source);
+            } else {
+                result = this.convertRoman(source);
+            }
+
+            return result;
+        },
+
+        /**
+         * Convert arabic nubmer to roman UTF-8 numerals
          *
          * @param {Number|String} number
          * @return {String}
          */
-        toRoman: function (number) {
+        arabicToRoman: function (number) {
             if (typeof number === 'string') {
                 number = parseInt(number, 10);
             }
@@ -91,7 +134,6 @@
             }
 
             var result = '';
-            var length = arabic.length;
             var i;
             var currentArabic;
             for (i = 0; i < length; i += 1) {
@@ -112,28 +154,21 @@
         },
 
         /**
-         * Convert roman regular string to roman numerals
+         * Convert simple roman string to roman UTF-8 numerals
          *
          * @param {String} source
          * @return {String}
          */
         convertRoman: function (source) {
-            var result = '';
-            var i;
-            var length = stringRoman.length;
-            var current;
-            var re;
-            for (i = 0; i < length; i += 1) {
-                current = stringRoman[i];
-                re = new RegExp('^' + current, 'i');
-                if (re.test(source)) {
-                    result = roman[i];
-                    result += this.convertRoman(source.substr(current.length, source.length));
-                    break;
-                }
+            if (typeof source !== 'string') {
+                return;
             }
 
-            return result;
+            if (!source.match(/^[ivxlcdm]+$/i)) {
+                return;
+            }
+
+            return convertRoman(source);
         },
     };
 

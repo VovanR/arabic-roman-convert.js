@@ -46,6 +46,21 @@ D → Ⅾ
 M → Ⅿ
 ```
 
+**Arabic number or simple Roman string** `.toRoman({String|Number})`
+```
+2 → Ⅱ
+III → Ⅲ
+vii → Ⅶ
+9 → Ⅸ
+X → Ⅹ
+XV → ⅩⅤ
+l → Ⅼ
+100 → Ⅽ
+D → Ⅾ
+M → Ⅿ
+```
+
+
 ## Install and Usage
 
 ### Bower
@@ -56,7 +71,7 @@ bower install --save arabic-roman-convert.js
 <link rel="stylesheet" href="bower_components/arabic-roman-convert.js/dist/arabic-roman-convert.min.js">
 ```
 ```js
-var num = window.ArabicRoman.arabicToRoman(2015);
+var num = window.ArabicRoman.toRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
 
@@ -67,7 +82,7 @@ npm i --save arabic-roman-convert.js
 ```js
 var arabicRomanConvert = require('arabic-roman-convert.js');
 
-var num = arabicRomanConvert.arabicToRoman(2015);
+var num = arabicRomanConvert.toRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
 

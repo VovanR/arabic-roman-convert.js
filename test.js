@@ -1,4 +1,5 @@
 var assert = require('chai').assert;
+var sinon = require('sinon');
 var arabicRoman = require('./index');
 
 var cod = {
@@ -32,6 +33,30 @@ var charToCode = function () {
     }
     return res;
 };
+
+describe('#toRoman', function () {
+    it('should fire `arabicToRoman` if argument is arabic number', function () {
+        var spy = sinon.spy(arabicRoman, 'arabicToRoman');
+
+        arabicRoman.toRoman(3);
+        arabicRoman.toRoman('5');
+        assert.isTrue(spy.called);
+        assert.equal(spy.getCall(0).args[0], 3);
+        assert.equal(spy.getCall(1).args[0], '5');
+
+        spy.restore();
+    });
+
+    it('should fire `convertRoman` if argument is simple roman', function () {
+        var spy = sinon.spy(arabicRoman, 'convertRoman');
+
+        arabicRoman.toRoman('III');
+        assert.isTrue(spy.called);
+        assert.equal(spy.getCall(0).args[0], 'III');
+
+        spy.restore();
+    });
+});
 
 describe('#arabicToRoman', function () {
     it('should not convert number < 1', function () {
@@ -104,6 +129,11 @@ describe('#arabicToRoman', function () {
 });
 
 describe('#convertRoman', function () {
+    it('should parse string attributes', function () {
+        assert.isUndefined(arabicRoman.convertRoman(3));
+        assert.isUndefined(arabicRoman.convertRoman('asdif'));
+    });
+
     it('should convert string to utf-8 symbols', function () {
         for (var num in cod) {
             assert.equal(arabicRoman.convertRoman(num), charToCode(num));
