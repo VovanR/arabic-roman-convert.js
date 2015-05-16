@@ -1,6 +1,6 @@
 /*!
  * arabic-roman-convert.js
- * Copyright(c) 2015 VovanR <mail@vovanr.com>
+ * Copyright(c) 2015 Vladimir Rodkin <mail@vovanr.com>
  * MIT Licensed
  */
 
@@ -72,7 +72,7 @@
 
     return {
         /**
-         * Convert arabic to numeral numerals
+         * Convert arabic nubmer to roman UTF-8 numerals
          *
          * @param {Number|String} number
          * @return {String}
@@ -112,7 +112,7 @@
         },
 
         /**
-         * Convert roman regular string to roman numerals
+         * Convert simple roman string to roman UTF-8 numerals
          *
          * @param {String} source
          * @return {String}

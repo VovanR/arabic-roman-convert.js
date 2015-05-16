@@ -6,9 +6,9 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-Convert [Arabic](http://en.wikipedia.org/wiki/Arabic_numerals) to [Roman](http://en.wikipedia.org/wiki/Roman_numerals) UTF-8 numerals
+> Convert [Arabic][wiki-arabic] to [Roman][wiki-roman] UTF-8 numerals
 
-Demo: [vovanr.github.io/arabic-roman-convert.js](https://vovanr.github.io/arabic-roman-convert.js)
+Demo: [vovanr.github.io/arabic-roman-convert.js][demo]
 
 **Arabic numerals** `.toRoman({Number|String})`
 ```
@@ -70,6 +70,10 @@ var arabicRomanConvert = require('arabic-roman-convert.js');
 var num = arabicRomanConvert.toRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
+
+[wiki-arabic]: http://en.wikipedia.org/wiki/Arabic_numerals
+[wiki-roman]: http://en.wikipedia.org/wiki/Roman_numerals
+[demo]: https://vovanr.github.io/arabic-roman-convert.js
 
 [npm-url]: https://npmjs.org/package/arabic-roman-convert.js
 [npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg
