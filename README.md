@@ -10,7 +10,7 @@
 
 Demo: [vovanr.github.io/arabic-roman-convert.js][demo]
 
-**Arabic numerals** `.toRoman({Number|String})`
+**Arabic numerals** `.arabicToRoman({Number|String})`
 ```
 1 → Ⅰ
 2 → Ⅱ
@@ -56,7 +56,7 @@ bower install --save arabic-roman-convert.js
 <link rel="stylesheet" href="bower_components/arabic-roman-convert.js/dist/arabic-roman-convert.min.js">
 ```
 ```js
-var num = window.ArabicRoman.toRoman(2015);
+var num = window.ArabicRoman.arabicToRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
 
@@ -67,7 +67,7 @@ npm i --save arabic-roman-convert.js
 ```js
 var arabicRomanConvert = require('arabic-roman-convert.js');
 
-var num = arabicRomanConvert.toRoman(2015);
+var num = arabicRomanConvert.arabicToRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
 

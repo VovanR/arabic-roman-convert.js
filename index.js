@@ -77,7 +77,7 @@
          * @param {Number|String} number
          * @return {String}
          */
-        toRoman: function (number) {
+        arabicToRoman: function (number) {
             if (typeof number === 'string') {
                 number = parseInt(number, 10);
             }
