@@ -86,6 +86,9 @@ var num = arabicRomanConvert.toRoman(2015);
 console.log(num); // ⅯⅯⅩⅤ
 ```
 
+## License
+MIT © [Vladimir Rodkin](https://github.com/VovanR)
+
 [wiki-arabic]: http://en.wikipedia.org/wiki/Arabic_numerals
 [wiki-roman]: http://en.wikipedia.org/wiki/Roman_numerals
 [demo]: https://vovanr.github.io/arabic-roman-convert.js
