@@ -37,12 +37,30 @@
 		text-align: left;
 		background-color: #fbfbfb;
 	}
+
+	/* repository */
+	.repo {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		font-size: 100%;
+		padding: 1em;
+		text-decoration: none;
+		opacity: 0.4;
+		color: #000;
+	}
+
+	.repo span {
+		text-decoration: underline;
+	}
 	</style>
 </head>
 <body>
 
 <input id="test-in" value="" type="text" autocomplete="off">
 <input id="test-out" value="" type="text" autocomplete="off" readonly="">
+
+<a class="repo" href="https://github.com/vovanr/arabic-roman-convert.js">MIT&nbsp;©&nbsp;<span>Vladimir Rodkin</span></a>
 
 <script src="index.js"></script>
 <script>
