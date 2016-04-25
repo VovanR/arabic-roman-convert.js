@@ -1,12 +1,15 @@
 # arabic-roman-convert.js
 
+[![Commitizen friendly][commitizen-image]][commitizen-url]
+[![XO code style][codestyle-image]][codestyle-url]
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-> Convert [Arabic][wiki-arabic] to [Roman][wiki-roman] UTF-8 numerals
+> Convert [Arabic][wiki-arabic] to [Roman][wiki-roman] UTF-8 numerals: 7 → Ⅶ
 
 Demo: [vovanr.github.io/arabic-roman-convert.js][demo]
 
@@ -71,19 +74,19 @@ bower install --save arabic-roman-convert.js
 <link rel="stylesheet" href="bower_components/arabic-roman-convert.js/dist/arabic-roman-convert.min.js">
 ```
 ```js
-var num = window.ArabicRoman.toRoman(2015);
-console.log(num); // ⅯⅯⅩⅤ
+var num = window.ArabicRoman.toRoman(2016);
+//=> ⅯⅯⅩⅥ
 ```
 
 ### Node
 ```sh
-npm i --save arabic-roman-convert.js
+npm install --save arabic-roman-convert.js
 ```
 ```js
 var arabicRomanConvert = require('arabic-roman-convert.js');
 
-var num = arabicRomanConvert.toRoman(2015);
-console.log(num); // ⅯⅯⅩⅤ
+var num = arabicRomanConvert.toRoman(2016);
+//=> ⅯⅯⅩⅥ
 ```
 
 ## License
@@ -93,17 +96,23 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 [wiki-roman]: http://en.wikipedia.org/wiki/Roman_numerals
 [demo]: https://vovanr.github.io/arabic-roman-convert.js
 
+[commitizen-url]: http://commitizen.github.io/cz-cli/
+[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square
+
+[codestyle-url]: https://github.com/sindresorhus/xo
+[codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
+
 [npm-url]: https://npmjs.org/package/arabic-roman-convert.js
-[npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg
+[npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/VovanR/arabic-roman-convert.js
-[travis-image]: http://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg
+[travis-image]: http://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/VovanR/arabic-roman-convert.js
-[coveralls-image]: http://img.shields.io/coveralls/VovanR/arabic-roman-convert.js.svg
+[coveralls-image]: http://img.shields.io/coveralls/VovanR/arabic-roman-convert.js.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/VovanR/arabic-roman-convert.js
-[depstat-image]: https://david-dm.org/VovanR/arabic-roman-convert.js.svg
+[depstat-image]: https://david-dm.org/VovanR/arabic-roman-convert.js.svg?style=flat-square
 
 [depstat-dev-url]: https://david-dm.org/VovanR/arabic-roman-convert.js
-[depstat-dev-image]: https://david-dm.org/VovanR/arabic-roman-convert.js/dev-status.svg
+[depstat-dev-image]: https://david-dm.org/VovanR/arabic-roman-convert.js/dev-status.svg?style=flat-square

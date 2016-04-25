@@ -1,7 +1,7 @@
 {
   "name": "arabic-roman-convert.js",
   "version": "1.1.0",
-  "description": "Convert Arabic to Roman UTF-8 numerals",
+  "description": "Convert Arabic to Roman UTF-8 numerals: 7 → Ⅶ",
   "authors": [
     "Vladimir Rodkin <mail@vovanr.com>"
   ],

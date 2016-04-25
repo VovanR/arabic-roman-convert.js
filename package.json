@@ -1,8 +1,22 @@
 {
   "name": "arabic-roman-convert.js",
   "version": "1.2.0",
-  "description": "Convert Arabic to Roman UTF-8 numerals",
-  "author": "Vladimir Rodkin <mail@vovanr.com>",
+  "description": "Convert Arabic to Roman UTF-8 numerals: 7 → Ⅶ",
+  "license": "MIT",
+  "repository": "VovanR/arabic-roman-convert.js",
+  "author": "Vladimir Rodkin <mail@vovanr.com> (http://vovanr.com/)",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "prepush": "npm test",
+    "test": "xo && nyc ava",
+    "release-patch": "mversion patch",
+    "release-minor": "mversion minor",
+    "release-major": "mversion major",
+    "deploy": "gh-pages-deploy"
+  },
+  "main": "index.js",
   "keywords": [
     "converter",
     "arabic",
@@ -12,50 +26,29 @@
     "utf8",
     "utf-8"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/VovanR/arabic-roman-convert.js"
-  },
-  "main": "./index.js",
-  "engines": {
-    "node": ""
-  },
-  "scripts": {
-    "coverage": "istanbul cover _mocha --",
-    "coveralls": "coveralls < coverage/lcov.info",
-    "jscs": "jscs ./*.js",
-    "jslint": "jshint --reporter ./node_modules/jshint-stylish/stylish.js ./*.js",
-    "lint": "npm run jslint; npm run jscs",
-    "postpublish": "git push --follow-tags",
-    "precoveralls": "npm run coverage",
-    "prepush": "npm test; npm run lint",
-    "tdd": "mocha --watch",
-    "test": "mocha",
-    "uglify:dist": "uglifyjs ./index.js > ./dist/arabic-roman-convert.min.js",
-    "uglify": "npm run uglify:dist",
-    "copy:dist": "cp ./index.js ./dist/arabic-roman-convert.js",
-    "copy": "npm run copy:dist",
-    "build:js": "npm run jshint && npm run uglify",
-    "build": "npm run copy && npm run build:js"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "chai": "^2.2.0",
-    "coveralls": "^2.11.2",
-    "husky": "^0.7.0",
-    "istanbul": "^0.3.11",
-    "jscs": "^1.12.0",
-    "jscs-jsdoc": "^1.0.1",
-    "jshint": "^2.7.0",
-    "jshint-stylish": "^1.0.1",
-    "mocha": "^2.2.4",
-    "mocha-lcov-reporter": "0.0.2",
-    "sinon": "^1.14.1",
-    "uglifyjs": "^2.4.10"
+    "ava": "^0.14.0",
+    "conventional-changelog-cli": "^1.1.1",
+    "coveralls": "^2.11.9",
+    "cz-conventional-changelog": "^1.1.6",
+    "husky": "^0.11.4",
+    "mversion": "^1.10.1",
+    "nyc": "^6.4.0",
+    "sinon": "^1.17.3",
+    "xo": "^0.14.0"
   },
   "bugs": {
     "url": "https://github.com/VovanR/arabic-roman-convert.js/issues"
   },
-  "homepage": "https://github.com/VovanR/arabic-roman-convert.js",
-  "license": "MIT",
-  "dependencies": {}
+  "homepage": "https://github.com/VovanR/arabic-roman-convert.js#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "gh-pages-deploy": {
+    "staticpath": "example",
+    "noprompt": false
+  }
 }
