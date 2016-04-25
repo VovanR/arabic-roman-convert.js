@@ -1,6 +1,6 @@
 {
   "name": "arabic-roman-convert.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Convert Arabic to Roman UTF-8 numerals: 7 → Ⅶ",
   "license": "MIT",
   "repository": "VovanR/arabic-roman-convert.js",
