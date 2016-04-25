@@ -71,7 +71,7 @@ M → Ⅿ
 bower install --save arabic-roman-convert.js
 ```
 ```html
-<link rel="stylesheet" href="bower_components/arabic-roman-convert.js/dist/arabic-roman-convert.min.js">
+<script src="bower_components/arabic-roman-convert.js/dist/arabic-roman-convert.min.js"></script>
 ```
 ```js
 var num = window.ArabicRoman.toRoman(2016);
