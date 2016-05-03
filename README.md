@@ -94,7 +94,7 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
 [wiki-arabic]: http://en.wikipedia.org/wiki/Arabic_numerals
 [wiki-roman]: http://en.wikipedia.org/wiki/Roman_numerals
-[demo]: https://vovanr.github.io/arabic-roman-convert.js
+[demo]: http://vovanr.github.io/arabic-roman-convert.js
 
 [commitizen-url]: http://commitizen.github.io/cz-cli/
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square
