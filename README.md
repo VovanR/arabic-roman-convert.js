@@ -95,24 +95,24 @@ var num = arabicRomanConvert.toRoman(2016);
 ## License
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
-[wiki-arabic]: http://en.wikipedia.org/wiki/Arabic_numerals
-[wiki-roman]: http://en.wikipedia.org/wiki/Roman_numerals
-[demo]: http://vovanr.github.io/arabic-roman-convert.js
+[wiki-arabic]: https://en.wikipedia.org/wiki/Arabic_numerals
+[wiki-roman]: https://en.wikipedia.org/wiki/Roman_numerals
+[demo]: https://vovanr.github.io/arabic-roman-convert.js
 
-[commitizen-url]: http://commitizen.github.io/cz-cli/
+[commitizen-url]: https://commitizen.github.io/cz-cli/
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square
 
-[codestyle-url]: https://github.com/sindresorhus/xo
+[codestyle-url]: https://github.com/xojs/xo
 [codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
 
 [npm-url]: https://npmjs.org/package/arabic-roman-convert.js
-[npm-image]: http://img.shields.io/npm/v/arabic-roman-convert.js.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/arabic-roman-convert.js.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/VovanR/arabic-roman-convert.js
-[travis-image]: http://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/VovanR/arabic-roman-convert.js.svg?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/VovanR/arabic-roman-convert.js
-[coveralls-image]: http://img.shields.io/coveralls/VovanR/arabic-roman-convert.js.svg?style=flat-square
+[coveralls-image]: https://img.shields.io/coveralls/VovanR/arabic-roman-convert.js.svg?style=flat-square
 
 [depstat-url]: https://david-dm.org/VovanR/arabic-roman-convert.js
 [depstat-image]: https://david-dm.org/VovanR/arabic-roman-convert.js.svg?style=flat-square
