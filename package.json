@@ -13,7 +13,7 @@
     "release-patch": "mversion patch",
     "release-minor": "mversion minor",
     "release-major": "mversion major",
-    "deploy": "gh-pages -d example"
+    "deploy": "gh-pages -d example -a"
   },
   "main": "index.js",
   "keywords": [
