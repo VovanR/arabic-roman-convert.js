@@ -4,7 +4,7 @@
   "description": "Convert Arabic to Roman UTF-8 numerals: 7 → Ⅶ",
   "license": "MIT",
   "repository": "VovanR/arabic-roman-convert.js",
-  "author": "Vladimir Rodkin <mail@vovanr.com> (http://vovanr.com/)",
+  "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
   "engines": {
     "node": ">=0.10.0"
   },
