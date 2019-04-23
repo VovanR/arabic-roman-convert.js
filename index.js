@@ -5,9 +5,11 @@
  */
 
 (function (root, factory) {
-	/* eslint-disable */
+	// eslint-disable-next-line no-undef
 	if (typeof define === 'function' && define.amd) {
+		// eslint-disable-next-line no-undef
 		define([], function () {
+			// eslint-disable-next-line no-return-assign
 			return (root.ArabicRoman = factory());
 		});
 	} else if (typeof module === 'object' && module.exports) {
@@ -15,19 +17,18 @@
 	} else {
 		root.ArabicRoman = factory();
 	}
-	/* eslint-enable */
 })(this, function () {
 	'use strict';
 
 	var arabic = [
 		1000,
-		900, // hard number
+		900, // Hard number
 		500,
-		400, // hard number
+		400, // Hard number
 		100,
-		90, // hard number
+		90, // Hard number
 		50,
-		40, // hard number
+		40, // Hard number
 		12,
 		11
 	];
@@ -55,18 +56,18 @@
 	];
 	var roman = [
 		'\u216F',
-		'\u216D\u216F', // hard number
+		'\u216D\u216F', // Hard number
 		'\u216E',
-		'\u216D\u216E', // hard number
+		'\u216D\u216E', // Hard number
 		'\u216D',
-		'\u2169\u216D', // hard number
+		'\u2169\u216D', // Hard number
 		'\u216C',
-		'\u2169\u216C', // hard number
+		'\u2169\u216C', // Hard number
 		'\u216B',
 		'\u216A'
 	];
 
-	// from 10 to 1
+	// From 10 to 1
 	var i = 11;
 	while (--i) {
 		arabic.push(i);
@@ -76,8 +77,8 @@
 	var length = roman.length;
 
 	/**
-	 * @param {String} source
-	 * @return {String}
+	 * @param {string} source
+	 * @return {string}
 	 */
 	function convertRoman(source) {
 		var result = '';
@@ -99,8 +100,8 @@
 
 	return {
 		/**
-		 * @param {Number|String} source
-		 * @return {String}
+		 * @param {number|string} source
+		 * @return {string}
 		 */
 		toRoman: function (source) {
 			var result;
@@ -120,8 +121,8 @@
 		/**
 		 * Convert arabic nubmer to roman UTF-8 numerals
 		 *
-		 * @param {Number|String} number
-		 * @return {String}
+		 * @param {number|string} number
+		 * @return {string}
 		 */
 		arabicToRoman: function (number) {
 			if (typeof number === 'string') {
@@ -148,6 +149,7 @@
 					) {
 						break;
 					}
+
 					result += roman[i];
 					number -= currentArabic;
 				}
@@ -159,8 +161,8 @@
 		/**
 		 * Convert simple roman string to roman UTF-8 numerals
 		 *
-		 * @param {String} source
-		 * @return {String}
+		 * @param {string} source
+		 * @return {string}
 		 */
 		convertRoman: function (source) {
 			if (typeof source !== 'string') {

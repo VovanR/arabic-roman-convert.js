@@ -1,6 +1,6 @@
 import test from 'ava';
 import sinon from 'sinon';
-import arabicRoman from './';
+import arabicRoman from '.';
 
 const cod = {
 	I: '\u2160',
@@ -22,19 +22,19 @@ const cod = {
 };
 
 /**
- * @return {String}
+ * @return {string} Unicode string
  */
-const charToCode = function () {
+function charToCode(...rest) {
 	let res = '';
-	const args = arguments;
 	let i;
-	for (i = 0; i < args.length; i++) {
-		res += cod[args[i]];
+	for (i = 0; i < rest.length; i++) {
+		res += cod[rest[i]];
 	}
-	return res;
-};
 
-// toRoman
+	return res;
+}
+
+// `toRoman`
 test('#toRoman should fire `arabicToRoman` if argument is arabic number', t => {
 	const spy = sinon.spy(arabicRoman, 'arabicToRoman');
 
@@ -59,7 +59,7 @@ test('#toRoman should fire `convertRoman` if argument is simple roman', t => {
 	spy.restore();
 });
 
-// arabicToRoman
+// `arabicToRoman`
 test('#arabicToRoman should not convert number < 1', t => {
 	t.is(arabicRoman.arabicToRoman(0), undefined);
 	t.is(arabicRoman.arabicToRoman(-1), undefined);
@@ -128,7 +128,7 @@ test('#arabicToRoman should convert hard numbers', t => {
 	t.is(arabicRoman.arabicToRoman(900), charToCode('C', 'M'));
 });
 
-// convertRoman
+// `convertRoman`
 test('#convertRoman should parse string attributes', t => {
 	t.is(arabicRoman.convertRoman(3), undefined);
 	t.is(arabicRoman.convertRoman('asdif'), undefined);
