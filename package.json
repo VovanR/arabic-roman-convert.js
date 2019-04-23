@@ -6,7 +6,7 @@
   "repository": "VovanR/arabic-roman-convert.js",
   "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6"
   },
   "scripts": {
     "prepush": "npm test",
